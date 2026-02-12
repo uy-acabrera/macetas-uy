@@ -126,6 +126,7 @@ body {
 .card-image {
   padding: 0;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .card-image-wrap {
