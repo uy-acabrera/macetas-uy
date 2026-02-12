@@ -1,0 +1,19 @@
+/**
+ * Design System Core — Single entry point
+ *
+ * HOW TO USE IN OTHER PROJECTS:
+ * 1. Copy the entire /styles/core folder into your project, or
+ * 2. Link this file: <link rel="stylesheet" href="/path/to/styles/core/index.css">
+ * 3. Ensure tokens/themes/base load before any app-specific CSS.
+ *
+ * Order matters: tokens → themes → base → typography → forms → components → utilities.
+ * Do not reorder. Add app-specific overrides in a separate layer after this file.
+ */
+
+@import "tokens.css";
+@import "themes.css";
+@import "base.css";
+@import "typography.css";
+@import "forms.css";
+@import "components.css";
+@import "utilities.css";

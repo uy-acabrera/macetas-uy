@@ -1,0 +1,55 @@
+/**
+ * Design System Core — Themes
+ * Override tokens only. No element selectors or hardcoded colors.
+ * Default theme = :root (light). Toggle via data-theme on html or a wrapper.
+ */
+
+/* Light theme: defined in tokens.css as :root (default) */
+
+[data-theme="dark"] {
+  --color-bg: #0f172a;
+  --color-bg-elevated: #1e293b;
+  --color-surface: #1e293b;
+  --color-surface-hover: #334155;
+  --color-text: #f1f5f9;
+  --color-text-muted: #94a3b8;
+  --color-border: #334155;
+  --color-border-strong: #475569;
+
+  --color-primary: #2dd4bf;
+  --color-primary-hover: #5eead4;
+  --color-primary-muted: #134e4a;
+  --color-secondary: #94a3b8;
+  --color-secondary-hover: #cbd5e1;
+  --color-secondary-muted: #334155;
+  --color-accent: #a78bfa;
+  --color-accent-hover: #c4b5fd;
+  --color-accent-muted: #4c1d95;
+
+  --color-success: #34d399;
+  --color-success-muted: #064e3b;
+  --color-warn: #fbbf24;
+  --color-warn-muted: #78350f;
+  --color-danger: #f87171;
+  --color-danger-muted: #7f1d1d;
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.2);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.25), 0 2px 4px -2px rgba(0, 0, 0, 0.2);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.25), 0 4px 6px -4px rgba(0, 0, 0, 0.2);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 8px 10px -6px rgba(0, 0, 0, 0.2);
+
+  /* Glassmorphism (dark: frosted glass on dark gradient) */
+  --glass-bg: rgba(255, 255, 255, 0.1);
+  --glass-border: rgba(255, 255, 255, 0.15);
+  --glass-border-hover: rgba(255, 255, 255, 0.28);
+  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  --glass-shadow-hover: 0 12px 40px rgba(0, 0, 0, 0.18);
+
+  /* Page gradient + ambient blobs for glass layout */
+  --theme-bg-start: #0f172a;
+  --theme-bg-mid: #1a2332;
+  --theme-bg-end: #0f172a;
+  --theme-blob: rgba(45, 212, 191, 0.08);
+  --theme-blob-main: rgba(71, 85, 105, 0.4);
+  --page-bg: linear-gradient(135deg, var(--theme-bg-start) 0%, var(--theme-bg-mid) 40%, var(--theme-bg-mid) 70%, var(--theme-bg-end) 100%);
+}

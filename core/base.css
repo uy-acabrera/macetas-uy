@@ -1,0 +1,109 @@
+/**
+ * Design System Core — Base / Reset
+ * Minimal, non-destructive baseline. Uses tokens for all values.
+ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  line-height: var(--leading-normal);
+  color: var(--color-text);
+  background: var(--page-bg);
+  background-attachment: fixed;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Focus visible: keyboard-only outline using tokens */
+:focus {
+  outline: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Ambient background shapes (glass layout): use with data-theme="dark" + gradient */
+.bg-shapes {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: var(--z-base);
+}
+
+.bg-shapes::before {
+  content: "";
+  position: absolute;
+  width: 60vmax;
+  height: 60vmax;
+  background: radial-gradient(circle, var(--theme-blob-main) 0%, transparent 70%);
+  top: -20%;
+  right: -10%;
+  border-radius: 50%;
+}
+
+.bg-shapes::after {
+  content: "";
+  position: absolute;
+  width: 40vmax;
+  height: 40vmax;
+  background: radial-gradient(circle, var(--theme-blob) 0%, transparent 70%);
+  bottom: -10%;
+  left: -5%;
+  border-radius: 50%;
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
